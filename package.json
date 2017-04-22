@@ -28,8 +28,8 @@
     "webpack-dev-server": "^2.4.3"
   },
   "scripts": {
-    "dev": "node src/index.js",
-    "build": "webpack --config webpack/config-dev.babel.js --hide-modules",
+    "dev": "webpack-dev-server --config webpack/configDev.babel.js --hot",
+    "build": "webpack --config webpack/configDev.babel.js --hide-modules",
     "precommit": "npm run lint",
     "lint": "standard --verbose | snazzy"
   }
