@@ -3,11 +3,13 @@ import webpack from 'webpack'
 import baseConfig from './configBase.babel'
 import { dist } from './filePaths'
 
-const config = {
+export default {
   ...baseConfig,
   devServer: {
     contentBase: dist,
     publicPath: '/assets',
+    quiet: true,
+    hot: true,
     port: process.env.PORT || 3000
   },
   plugins: [
@@ -15,7 +17,3 @@ const config = {
     new webpack.HotModuleReplacementPlugin()
   ]
 }
-
-console.log(config)
-
-export default config

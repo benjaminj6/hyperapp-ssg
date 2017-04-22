@@ -25,10 +25,11 @@
     "snazzy": "^7.0.0",
     "standard": "^10.0.2",
     "webpack": "^2.4.1",
-    "webpack-dev-server": "^2.4.3"
+    "webpack-dev-server": "^2.4.3",
+    "webpack-logger-plugin": "^1.2.0"
   },
   "scripts": {
-    "dev": "webpack-dev-server --config webpack/configDev.babel.js --hot",
+    "dev": "webpack-dev-server --config webpack/configDev.babel.js",
     "build": "webpack --config webpack/configDev.babel.js --hide-modules",
     "precommit": "npm run lint",
     "lint": "standard --verbose | snazzy"
