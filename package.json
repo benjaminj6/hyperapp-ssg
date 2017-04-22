@@ -12,6 +12,15 @@
     "hyperapp": "^0.8.1"
   },
   "devDependencies": {
+    "ava": "^0.19.1",
+    "husky": "^0.13.3",
+    "scripty": "^1.7.1",
+    "snazzy": "^7.0.0",
     "standard": "^10.0.2"
+  },
+  "scripts": {
+    "dev": "node src/index.js",
+    "precommit": "npm run lint",
+    "lint": "standard --verbose | snazzy"
   }
 }
