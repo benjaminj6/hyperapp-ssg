@@ -1,7 +1,10 @@
-import { app, h } from 'hyperapp' // eslint-disable-line
+import { app } from 'hyperapp'
+
+import state from './state'
+import view from './view'
 
 export default app({
-  state: 'foo!',
-  view: state => <div>{state}</div>,
+  state,
+  view,
   root: document.getElementById('root')
 })
