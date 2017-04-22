@@ -1,6 +1,6 @@
-import baseConfig from './config.base.babel'
+import baseConfig from './configBase.babel'
 
-import { dist } from './file-paths'
+import { dist } from './filePaths'
 
 const config = {
   ...baseConfig,

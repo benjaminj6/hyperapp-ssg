@@ -1,7 +1,7 @@
 import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 
-import { src, dist, statics } from './file-paths'
+import { src, dist, statics } from './filePaths'
 
 export default {
   entry: path.join(src, 'index.js'),
