@@ -6,11 +6,12 @@ import { dist } from './filePaths'
 export default {
   ...baseConfig,
   devServer: {
+    clientLogLevel: 'warning',
     contentBase: dist,
-    publicPath: '/assets',
-    quiet: true,
     hot: true,
-    port: process.env.PORT || 3000
+    port: process.env.PORT || 3000,
+    publicPath: '/assets',
+    quiet: true
   },
   plugins: [
     ...baseConfig.plugins,
