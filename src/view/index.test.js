@@ -17,5 +17,6 @@ test('should throw if `test` is not present in state', t => {
 
 test('should pass `state.test` to children', t => {
   const wrapper = view(mockState)
+  console.log(wrapper)
   t.is(wrapper.children[0], mockState.test)
 })

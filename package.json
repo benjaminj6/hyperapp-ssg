@@ -9,6 +9,7 @@
   "dependencies": {
     "fela": "^4.3.2",
     "fela-dom": "^4.3.2",
+    "hyper-fela": "^1.4.1",
     "hyperapp": "^0.8.1"
   },
   "devDependencies": {
@@ -19,12 +20,14 @@
     "babel-plugin-module-resolver": "^2.7.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
     "babel-preset-env": "^1.4.0",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-stage-0": "^6.24.1",
     "babel-register": "^6.24.1",
     "eslint-plugin-flowtype": "^2.32.1",
     "flow-bin": "^0.44.2",
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.3",
+    "react-styling": "^1.6.2",
     "scripty": "^1.7.1",
     "snazzy": "^7.0.0",
     "standard": "^10.0.2",
@@ -37,10 +40,12 @@
   },
   "standard": {
     "parser": "babel-eslint",
-    "plugins": ["flowtype"]
+    "plugins": [
+      "flowtype"
+    ]
   },
   "scripts": {
-    "dev": "webpack-dev-server --config webpack/configDev.babel.js",
+    "dev": "webpack-dev-server --config webpack/configDev.babel.js --open",
     "build": "webpack --config webpack/configDev.babel.js --hide-modules",
     "precommit": "npm run lint",
     "test": "ava",
