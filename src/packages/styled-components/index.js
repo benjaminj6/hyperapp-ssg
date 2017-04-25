@@ -1,7 +1,7 @@
 import { h } from 'hyperapp' // eslint-disable-line
 import { createRenderer } from 'fela'
 import { render } from 'fela-dom'
-import styled from 'react-styling'
+import css from 'react-styling'
 
 // intialize renderer
 const renderer = createRenderer()
@@ -12,15 +12,30 @@ const stylesheet = document.createElement('style')
 document.head.appendChild(stylesheet)
 render(renderer, stylesheet)
 
-const testRule = () => styled`
-  @media (min-width: 400px) {
-    font-size: 20px
-    background: red
-  }
+const evaluateInterpolation = (arg = '', props) => typeof arg === 'function' ? arg(props) : arg
 
-  background: green
-  font-size: 14px
-`
+const createCssRule = (props) => (strings, ...args) => {
+  const template = strings.map((string, i) => string + evaluateInterpolation(args[i], props)).join('')
+  return css`${template}`
+}
 
-const ruleName = renderRule(testRule)
-console.log(ruleName)
+const createRule = (props) => (
+  strings,
+  ...args
+) => renderRule(
+  () => createCssRule(props)(strings, ...args)
+)
+
+const createStyledComponent = (tagName) => (strings, ...args) => (props, children) => {
+  const templ = createRule(props)
+  const rule = templ(strings, ...args)
+  console.log('RULE', rule)
+
+  return h(
+    tagName,
+    { class: rule },
+    ...children
+  )
+}
+
+export default createStyledComponent
