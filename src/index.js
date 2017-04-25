@@ -1,4 +1,5 @@
 import { app } from 'hyperapp'
+import './style'
 
 import state from './state'
 import view from './view'
