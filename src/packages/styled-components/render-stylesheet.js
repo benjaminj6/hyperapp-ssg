@@ -11,5 +11,4 @@ document.head.appendChild(stylesheet)
 render(renderer, stylesheet)
 
 // export renderRule, which attaches rules to the renerer instance
-const { renderRule } = renderer
-export default renderRule
+export default renderer

@@ -3,7 +3,7 @@ import test from 'ava'
 import view from './index'
 
 const mockState = {
-  test: 'test'
+  test: 'foo'
 }
 
 test('should render without crashing', t => {

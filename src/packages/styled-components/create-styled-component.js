@@ -1,7 +1,9 @@
 import { h } from 'hyperapp' // eslint-disable-line
 import css from 'react-styling'
 
-import renderRule from './render-stylesheet'
+import renderer from './render-stylesheet'
+
+const { renderRule } = renderer
 
 const evaluateInterpolation = (arg = '', props) => typeof arg === 'function' ? arg(props) : arg
 
