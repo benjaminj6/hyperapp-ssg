@@ -1,10 +1,15 @@
 import test from 'ava'
 
-import renderRule from '../renderStyleSheet'
+import renderer from '../render-stylesheet'
 
-test('should return some classes', t => {
-  const rule = renderRule(() => ({
-    background: 'green'
+test.afterEach.always(t => {
+  renderer.clear()
+})
+
+test.serial('should return some classes', t => {
+  const rule = renderer.renderRule(() => ({
+    background: 'green',
+    padding: '10px'
   }))
 
   console.log(rule)
