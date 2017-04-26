@@ -2,7 +2,7 @@ import path from 'path'
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import WebpackLoggerPlugin from 'webpack-logger-plugin'
 
-import { src, dist, statics } from './filePaths'
+import { src, dist, statics } from './file-paths'
 
 export default {
   entry: path.join(src, 'index.js'),

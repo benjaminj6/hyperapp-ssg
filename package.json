@@ -49,7 +49,7 @@
     ]
   },
   "scripts": {
-    "dev": "webpack-dev-server --config webpack/configDev.babel.js --open",
+    "dev": "webpack-dev-server --config webpack/config-dev.babel.js --open",
     "build": "webpack --config webpack/configDev.babel.js --hide-modules",
     "precommit": "npm run lint",
     "test": "ava",

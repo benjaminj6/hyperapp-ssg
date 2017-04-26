@@ -1,7 +1,7 @@
 import webpack from 'webpack'
 
-import baseConfig from './configBase.babel'
-import { dist } from './filePaths'
+import baseConfig from './config-base.babel'
+import { dist } from './file-paths'
 
 export default {
   ...baseConfig,
