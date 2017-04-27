@@ -1,6 +1,7 @@
 {
   "exclude": [
-    "./dist",
-    "./helpers"
-  ]
+    "dist",
+    "helpers"
+  ],
+  "all": true
 }
