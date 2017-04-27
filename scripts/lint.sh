@@ -1,1 +1,1 @@
-prettier-eslint "src/**/*.js" --write -- --colors
+prettier-eslint "src" --write -- --colors
