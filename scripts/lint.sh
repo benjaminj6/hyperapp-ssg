@@ -1,0 +1,1 @@
+standard --verbose | snazzy
