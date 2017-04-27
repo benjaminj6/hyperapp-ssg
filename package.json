@@ -56,7 +56,7 @@
   "scripty": {
     "silent": true
   },
-  "pre-commit": "npm run lint-staged",
+  "pre-commit": "lint-staged",
   "lint-staged": {
     "*.js": [
       "echo 'HELLO'",
