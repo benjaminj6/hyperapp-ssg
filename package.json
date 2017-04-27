@@ -62,7 +62,6 @@
     "test": "ava",
     "cov": "nyc --all npm test",
     "flow": "flow",
-    "lint": "scripty",
-    "prettier": "prettier-eslint \"./src/view/index.js\""
+    "lint": "scripty"
   }
 }
