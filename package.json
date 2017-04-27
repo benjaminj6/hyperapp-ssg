@@ -1,6 +1,6 @@
 {
   "name": "hyperapp-ssg",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Using hyperapp v-dom to statically render html",
   "main": "index.js",
   "repository": "https://github.com/benjaminj6/hyperapp-ssg.git",
