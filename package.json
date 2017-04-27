@@ -28,6 +28,7 @@
     "flow-bin": "^0.44.2",
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.3",
+    "nyc": "^10.2.0",
     "react-styling": "^1.6.2",
     "scripty": "^1.7.1",
     "snazzy": "^7.0.0",
@@ -40,7 +41,8 @@
     "require": [
       "babel-register",
       "./helpers/setup-browser-env.js"
-    ]
+    ],
+    "babel": "inherit"
   },
   "standard": {
     "parser": "babel-eslint",
@@ -53,6 +55,7 @@
     "build": "webpack --config webpack/configDev.babel.js --hide-modules",
     "precommit": "npm run lint",
     "test": "ava",
+    "cov": "nyc --all npm test",
     "flow": "flow",
     "lint": "standard --verbose | snazzy"
   }

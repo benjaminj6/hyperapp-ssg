@@ -1,6 +1,6 @@
 import test from 'ava'
 
-import view from './index'
+import view from '../index'
 
 const mockState = {
   test: 'foo'
@@ -17,6 +17,5 @@ test('should throw if `test` is not present in state', t => {
 
 test('should pass `state.test` to children', t => {
   const wrapper = view(mockState)
-  console.log(wrapper)
   t.is(wrapper.children[0], mockState.test)
 })
