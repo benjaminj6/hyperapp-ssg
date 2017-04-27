@@ -1,1 +1,1 @@
-standard --verbose | snazzy
+prettier-eslint "src/**/*.js" --write -- --colors
