@@ -12,5 +12,5 @@ const Title = styled('h1')`
 `
 
 export default (state: State) => (
-  <Title bg='green'>{state.test}</Title>;
+  <Title bg='green'>{state.test}</Title>
 )
