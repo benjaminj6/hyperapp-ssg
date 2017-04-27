@@ -66,6 +66,7 @@
   "scripts": {
     "dev": "scripty",
     "build": "scripty",
+    "lint-staged": "lint-staged",
     "test": "ava",
     "cov": "nyc --all npm test",
     "flow": "flow",
