@@ -50,13 +50,16 @@
       "flowtype"
     ]
   },
+  "scripty": {
+    "silent": true
+  },
   "scripts": {
-    "dev": "webpack-dev-server --config webpack/config-dev.babel.js --open",
-    "build": "webpack --config webpack/configDev.babel.js --hide-modules",
+    "dev": "scripty",
+    "build": "scripty",
     "precommit": "npm run lint",
     "test": "ava",
     "cov": "nyc --all npm test",
     "flow": "flow",
-    "lint": "standard --verbose | snazzy"
+    "lint": "scripty"
   }
 }
