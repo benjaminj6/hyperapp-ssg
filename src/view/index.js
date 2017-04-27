@@ -11,6 +11,4 @@ const Title = styled('h1')`
   padding: 5px 20px
 `
 
-export default (state: State) => (
-  <Title bg='green'>{state.test}</Title>
-)
+export default (state: State) => <Title bg='green'>{state.test}</Title>
