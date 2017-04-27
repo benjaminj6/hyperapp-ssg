@@ -36,6 +36,7 @@
     "flow-bin": "^0.44.2",
     "html-webpack-plugin": "^2.28.0",
     "husky": "^0.13.3",
+    "lint-staged": "^3.4.0",
     "nyc": "^10.2.0",
     "prettier-eslint-cli": "^3.4.2",
     "react-styling": "^1.6.2",
