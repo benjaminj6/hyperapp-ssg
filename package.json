@@ -59,7 +59,7 @@
   "precommit": "lint-staged",
   "lint-staged": {
     "**/*.js": [
-      "prettier-eslint",
+      "prettier-eslint --write",
       "git add"
     ]
   },
