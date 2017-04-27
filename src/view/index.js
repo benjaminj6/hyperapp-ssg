@@ -1,7 +1,7 @@
 // @flow
-import { h } from 'hyperapp' // eslint-disable-line
+import {h} from 'hyperapp' // eslint-disable-line
 
-import type { State } from '../state'
+import type {State} from '../state'
 import styled from 'packages/styled-components'
 
 const Title = styled('h1')`
@@ -11,6 +11,4 @@ const Title = styled('h1')`
   padding: 5px 20px
 `
 
-export default (state: State) => (
-  <Title bg='green'>{state.test}</Title>
-)
+export default (state: State) => <Title bg='green'>{state.test}</Title>

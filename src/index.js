@@ -1,4 +1,4 @@
-import { app } from 'hyperapp'
+import {app} from 'hyperapp'
 import './style'
 
 import state from './state'

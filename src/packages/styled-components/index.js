@@ -1,1 +1,1 @@
-export { createStyled as default } from './create-styled-component'
+export {createStyled as default} from './create-styled-component'
