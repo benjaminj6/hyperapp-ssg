@@ -15,12 +15,7 @@ const createCssRule = (props) => (strings, ...args) => {
 const createRule = (props) => (
   strings,
   ...args
-) => {
-  console.log('createRule', createCssRule(props)(strings, ...args))
-  return renderRule(
-    () => createCssRule(props)(strings, ...args)
-  )
-}
+) => renderRule(() => createCssRule(props)(strings, ...args))
 
 export const createStyled = (TagName) => (strings, ...args) => (props, children) => {
   const templ = createRule(props)
