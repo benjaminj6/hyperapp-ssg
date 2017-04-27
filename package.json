@@ -56,10 +56,15 @@
   "scripty": {
     "silent": true
   },
+  "pre-commit": "npm run lint-staged",
+  "lint-staged": {
+    "*.js": [
+      "prettier-eslint"
+    ]
+  },
   "scripts": {
     "dev": "scripty",
     "build": "scripty",
-    "precommit": "npm run lint",
     "test": "ava",
     "cov": "nyc --all npm test",
     "flow": "flow",
