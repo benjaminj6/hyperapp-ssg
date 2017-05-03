@@ -1,1 +1,1 @@
-webpack --config webpack/configDev.babel.js --hide-modules
+webpack --config webpack/config-static.babel.js --hide-modules
