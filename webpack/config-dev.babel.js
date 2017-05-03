@@ -13,8 +13,5 @@ export default {
     publicPath: '/assets',
     quiet: true
   },
-  plugins: [
-    ...baseConfig.plugins,
-    new webpack.HotModuleReplacementPlugin()
-  ]
+  plugins: [...baseConfig.plugins, new webpack.HotModuleReplacementPlugin()]
 }

@@ -1,9 +1,9 @@
-import {h} from 'hyperapp' // eslint-disable-line
+import { h } from 'hyperapp' // eslint-disable-line
 import css from 'react-styling'
 
 import renderer from './render-stylesheet'
 
-const {renderRule} = renderer
+const { renderRule } = renderer
 
 const evaluateInterpolation = (arg = '', props) =>
   (typeof arg === 'function' ? arg(props) : arg)
@@ -26,11 +26,11 @@ export const createStyled = TagName => (strings, ...args) => (
   let rule = templ(strings, ...args)
 
   if (typeof TagName === 'function') {
-    const Element = h(TagName, {...props}, ...children)
+    const Element = h(TagName, { ...props }, ...children)
     Element.data.class = `${Element.data.class} ${rule}`
 
     return Element
   }
 
-  return h(TagName, {class: rule}, ...children)
+  return h(TagName, { class: rule }, ...children)
 }

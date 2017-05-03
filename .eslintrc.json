@@ -3,5 +3,8 @@
   "extends": ["standard", "standard-jsx"],
   "plugins": [
     "flowtype"
-  ]
+  ],
+  "rules": {
+    "object-curly-spacing": ["error", "always"]
+  }
 }

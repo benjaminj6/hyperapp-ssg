@@ -1,6 +1,6 @@
-import {h} from 'hyperapp' // eslint-disable-line
-import {createRenderer} from 'fela'
-import {render} from 'fela-dom'
+import { h } from 'hyperapp' // eslint-disable-line
+import { createRenderer } from 'fela'
+import { render } from 'fela-dom'
 
 // intialize renderer
 const renderer = createRenderer()

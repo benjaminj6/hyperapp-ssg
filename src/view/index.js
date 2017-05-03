@@ -1,7 +1,7 @@
 // @flow
-import {h} from 'hyperapp' // eslint-disable-line
+import { h } from 'hyperapp' // eslint-disable-line
 
-import type {State} from '../state'
+import type { State } from '../state'
 import styled from 'packages/styled-components'
 
 const Title = styled('h1')`

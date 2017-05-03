@@ -2,7 +2,7 @@ import path from 'path'
 import StaticSiteGeneratorPlugin from 'static-site-generator-webpack-plugin'
 
 import baseConfig from './config-base.babel'
-import {root, statics} from './file-paths'
+import { root, statics } from './file-paths'
 
 import document from 'min-document'
 
@@ -18,7 +18,7 @@ export default {
   plugins: [
     new StaticSiteGeneratorPlugin({
       paths: ['/'],
-      globals: {document}
+      globals: { document }
     })
   ]
 }
