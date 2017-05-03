@@ -1,8 +1,11 @@
 // @flow
-import {h} from 'hyperapp' // eslint-disable-line
+import { h } from 'hyperapp' // eslint-disable-line
 
 import stringify from './stringify-html-node'
+// $FlowFixMe: figure out how to stub/ignore all non-js imports
 import template from './template.html'
+
+import view from 'view'
 
 const Title = () => <span>title</span>
 const app = state => (
@@ -11,7 +14,7 @@ const app = state => (
   </h1>
 )
 
-const html = app({class: 'bleh'})
+const html = app({ title: 'bleh' })
 export default (data: {}) =>
   template({
     app: stringify(html),
