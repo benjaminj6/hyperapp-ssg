@@ -1,4 +1,5 @@
-const selfClosingTags = [
+// @flow
+const selfClosingTags: string[] = [
   'area',
   'base',
   'br',
@@ -17,7 +18,13 @@ const selfClosingTags = [
   'wbr'
 ]
 
-const stringify = ({ tag, data = {}, children }) => {
+type Node = {
+  tag: string,
+  data: {},
+  children: Array<mixed>
+}
+
+const stringify: Function = ({ tag, data = {}, children }: Node) => {
   const attrNames = Object.keys(data)
   const attrs = attrNames.map(attr => ` ${attr}="${data[attr]}"`).join('')
 
@@ -32,7 +39,7 @@ const stringify = ({ tag, data = {}, children }) => {
   }
 
   return `
-    <${tag + attrs}>${getChildren}</${tag}>
+    <${tag + attrs}>${String(getChildren)}</${tag}>
   `
 }
 
